@@ -1,0 +1,70 @@
+ext.versions = [
+        appcompat          : '1.0.2',
+        material           : '1.7.0',
+        corektx            : '1.9.0',
+        compose            : '1.0.0',
+        uiSupport          : '1.0.0',
+        kotlin             : '1.4.10',
+        okhttp             : '3.14.4',
+        retrofit           : '2.9.0',
+        hilt               : '2.44',
+        activitycompose    : '1.6.1',
+        lifecycleruntimektx: '2.5.1',
+        junit              : '4.13.2',
+        mockito            : '2.25.1',
+        assertj            : '3.17.2',
+        coreTesting        : '1.1.1',
+        mockitokotlin      : '4.0.0',
+        coroutinetest      : '1.6.4',
+        turbine            : '0.7.0',
+        truth              : '1.1.3',
+        mockk              : '1.12.3',
+        espresso           : '3.1.0',
+        cardViewVersion    : '1.0.0',
+        androidjunit       : '1.1.4'
+]
+
+ext.libraries = [
+        androidSupportAppCompat : "androidx.appcompat:appcompat:$versions.androidSupport",
+        androidSupportCardView  : "androidx.cardview:cardview:$versions.uiSupport",
+        kotlinStd               : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$versions.kotlin",
+        okhttpLoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:$versions.okhttp",
+        okhttp                  : "com.squareup.okhttp3:okhttp:$versions.okhttp",
+        retrofit                : "com.squareup.retrofit2:retrofit:$versions.retrofit",
+        retrofitGsonConverter   : "com.squareup.retrofit2:converter-gson:$versions.retrofit",
+        cardView                : "androidx.cardview:cardview:$versions.cardViewVersion",
+        composeui               : "androidx.compose.ui:ui:$versions.compose",
+        composematerial         : "androidx.compose.material:material:$versions.compose",
+        composepreview          : "androidx.compose.ui:ui-tooling-preview:$versions.compose",
+
+]
+
+ext.unitTestLibraries = [
+        junit        : "junit:junit:$versions.junit",
+        mockito      : "org.mockito:mockito-inline:$versions.mockito",
+        assertj      : "org.assertj:assertj-core:$versions.assertj",
+        kotlinReflect: "org.jetbrains.kotlin:kotlin-reflect:$versions.kotlin",
+        coreTesting  : "android.arch.core:core-testing:$versions.coreTesting",
+        mockitokotlin: "org.mockito.kotlin:mockito-kotlin:$versions.mockitokotlin",
+        turbine      : "app.cash.turbine:turbine:$versions.turbine",
+        truth        : "com.google.truth:truth:$versions.truth",
+        mockk        : "io.mockk:mockk:$versions.mockk",
+        coroutinetest: "org.jetbrains.kotlinx:kotlinx-coroutines-test.mockito.kotlin:mockito-kotlin:$versions.coroutinetest",
+]
+
+ext.instrumentationTestLibraries = [
+        espressoCore: ["androidx.test.espresso:espresso-core:$versions.espresso", {
+            exclude group: 'com.android.support', module: 'support-annotations'
+        }],
+        testCore    : "androidx.test:core:$versions.testCore",
+        testRunner  : "androidx.test:runner:$versions.testRunner",
+        archCore    : "androidx.arch.core:core-testing:$versions.archCore",
+        composejunit: "androidx.compose.ui:ui-test-junit4:$versions.compose",
+        hilttest    : "com.google.dagger:hilt-android-testing:$versions.hilt",
+        androidjunit: "androidx.test.ext:junit:$versions.androidjunit"
+]
+
+
+ext.compilers = [
+        lifecycleCompiler: "androidx.lifecycle:lifecycle-compiler:$versions.androidLifecycle",
+]

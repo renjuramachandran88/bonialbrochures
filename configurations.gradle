@@ -1,0 +1,21 @@
+ext.versionConfig = [
+        major: 1,
+        minor: 0,
+        patch: 0
+]
+
+
+ext.appConfig = [
+        compileSdk     : 33,
+        buildTools     : "33.0.0",
+        minSdk         : 21,
+        targetSdk      : 33,
+        multiDexEnabled: true,
+        versionCode    : 1,
+        versionName    : "1.0",
+]
+
+ext.instrumentationConfig = [
+        testInstrumentationRunner: "androidx.test.runner.AndroidJUnitRunner",
+]
+
