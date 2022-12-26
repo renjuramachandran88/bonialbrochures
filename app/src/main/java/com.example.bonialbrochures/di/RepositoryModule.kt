@@ -1,5 +1,7 @@
 package com.example.bonialbrochures.di
 
+import com.example.bonialbrochures.data.local.BrochureDatabase
+import com.example.bonialbrochures.data.mapper.BrochureResponseMapper
 import com.example.bonialbrochures.data.remote.BrochureService
 import com.example.bonialbrochures.data.repository.BrochuresRepositoryImpl
 import com.example.bonialbrochures.domain.repository.BrochuresRepository
@@ -17,8 +19,10 @@ object RepositoryModule {
     @Provides
     fun provideBrochureRepository(
         brochureService: BrochureService,
+        brochureDatabase: BrochureDatabase,
+        mapper: BrochureResponseMapper
     ): BrochuresRepository {
-        return BrochuresRepositoryImpl(brochureService)
+        return BrochuresRepositoryImpl(brochureService, brochureDatabase, mapper)
     }
 
     @Provides
