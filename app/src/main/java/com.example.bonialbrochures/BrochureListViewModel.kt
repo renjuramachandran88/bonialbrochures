@@ -23,6 +23,10 @@ class BrochureListViewModel @Inject constructor(
     val state: StateFlow<BrochureListState> = _state
     private var brochures = listOf<BrochureEntity>()
 
+    init {
+        getBrochureList()
+    }
+
 
     private fun getBrochureList() {
         viewModelScope.launch {
@@ -39,6 +43,8 @@ class BrochureListViewModel @Inject constructor(
         }
     }
 
+
+    //TODO call this method after implementing filter options in UI
     fun getFilteredBrochures() {
         viewModelScope.launch {
             brochureUseCase.getFilteredBrochureList()
